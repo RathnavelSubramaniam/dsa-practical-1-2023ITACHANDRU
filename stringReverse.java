@@ -10,13 +10,13 @@ String str = input.nextLine();
 String reversed="";
 System.out.println("THE REVERSED STRING IS: " +reverseString(str,"",0,str.length()-1) );
 }
-public static String reverseString()
+public static String reverseString(String str,String reversed,int startIndex,int endIndex)
  {
-if(str.isEmpty())
+if(startIndex > endIndex)
 {
-    return str;
+    return reversed;
 }
-reverseString(str.substring(1))+str.charAt(0);
-
+reversed +=str.charAt(endIndex);
+return reverseString(str,reversed,startIndex,endIndex - 1);
  }
 }
