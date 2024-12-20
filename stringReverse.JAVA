@@ -12,8 +12,11 @@ System.out.println("THE REVERSED STRING IS: " +reverseString(str,"",0,str.length
 }
 public static String reverseString()
  {
-
-//TYPE YOUR CODE HERE
+if(str.isEmpty())
+{
+    return str;
+}
+reverseString(str.substring(1))+str.charAt(0);
 
  }
 }
